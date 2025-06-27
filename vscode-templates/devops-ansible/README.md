@@ -9,4 +9,4 @@ After setting the variable, restart VS Code, making sure to close all other open
     1. Install the extension [VS Code: Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
     2. In VS Code, press F1 and select Remote-Containers: Reopen in Container
 
-4. Run the Ansible playbook: `ansible-playbook playbooks/main.yml`
+4. Run the Ansible playbook: `ansible-playbook playbooks/main.yml` or `bash run.sh`
