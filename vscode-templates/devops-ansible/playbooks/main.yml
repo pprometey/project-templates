@@ -1,0 +1,6 @@
+- name: Base setup for #{projectName}
+  hosts: all
+  become: true
+  tasks:
+    - name: Ping
+      ansible.builtin.ping:
