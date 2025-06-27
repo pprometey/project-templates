@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-sudo chmod o-w .
+sudo chown -R developer:developer /home/developer/${localWorkspaceFolderBasename}
+chmod o-w /home/developer/${localWorkspaceFolderBasename}
 
 if test -f /mnt/keys/id_rsa; then
   cp /mnt/keys/id_rsa ~/.ssh/id_rsa
