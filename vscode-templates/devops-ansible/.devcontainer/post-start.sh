@@ -1,8 +1,9 @@
 #!/bin/bash
 set -e
 
-sudo chown -R developer:developer /home/developer/${localWorkspaceFolderBasename}
-chmod o-w /home/developer/${localWorkspaceFolderBasename}
+PROJECT_DIR=$(basename "$PWD")
+sudo chown -R developer:developer "/home/developer/$PROJECT_DIR"
+sudo chmod o-w "/home/developer/$PROJECT_DIR"
 
 if test -f /mnt/keys/id_rsa; then
   cp /mnt/keys/id_rsa ~/.ssh/id_rsa
