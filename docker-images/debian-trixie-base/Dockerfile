@@ -6,8 +6,17 @@ ENV LC_ALL=en_US.UTF-8
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-      locales ca-certificates sudo openssh-client tree curl wget unzip \
-      iputils-ping net-tools telnet pv gnupg screen mc vim nano less git \
+      sudo \
+      locales \
+      ca-certificates \
+      openssh-client \
+      tree \
+      curl wget \
+      unzip \
+      iputils-ping net-tools telnet \
+      pv tmux vim nano less  \
+      gnupg git \
+      mc \
       python3 python3-venv python3-pip && \
     sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
     locale-gen en_US.UTF-8 && \
