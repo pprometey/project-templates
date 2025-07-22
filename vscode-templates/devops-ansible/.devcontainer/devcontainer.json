@@ -1,12 +1,10 @@
 {
-  "name": "Debian 13 + Ansible (venv)",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "remoteUser": "developer",
+  "name": "#{projectName}",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "ansible-master",
   "workspaceFolder": "/home/developer/${localWorkspaceFolderBasename}",
-  "features": {},
-  "runArgs": ["--dns", "8.8.8.8"],
+  "remoteUser": "developer",
+  "containerUser": "developer",
   "mounts": [
     "source=${localWorkspaceFolder},target=/home/developer/${localWorkspaceFolderBasename},type=bind",
     "source=${localEnv:DEFAULT_SSH_KEY}/id_rsa,target=/mnt/keys/id_rsa,type=bind,readonly",

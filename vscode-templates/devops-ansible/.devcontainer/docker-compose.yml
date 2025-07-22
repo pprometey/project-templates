@@ -1,0 +1,11 @@
+version: '2.4'
+
+services:
+  ansible-master:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
+      - 9.9.9.9
